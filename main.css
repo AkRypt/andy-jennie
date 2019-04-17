@@ -29,9 +29,121 @@ body {
     border: 2px solid #93daff;
     border-radius: 10px;
     padding: 30px;
-    height: 500px;
 }
 .anje {
     width: 100%;
     height: 100%;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+    /* Slide in Elements (VERTICALLY) */
+.slideanimy {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+    /* Slide in Elements (HORIZONTALLY) */
+.slideanim-right {visibility:hidden;}
+.slide-right {
+    /* The name of the animation */
+    animation-name: slide-right;
+    -webkit-animation-name: slide-right;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide-right {
+    0% {
+    opacity: 0;
+    transform: translateX(70%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slide-right {
+    0% {
+    opacity: 0;
+    -webkit-transform: translateX(70%);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    }
+}    
+
+.slideanim-left {visibility:hidden;}
+.slide-left {
+    /* The name of the animation */
+    animation-name: slide-left;
+    -webkit-animation-name: slide-left;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide-left {
+    0% {
+    opacity: 0;
+    transform: translateX(-70%);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slide-left {
+    0% {
+    opacity: 0;
+    -webkit-transform: translateX(-70%);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    }
+}    
+
+
+#bottom {
+    background: #0061ff;
+    border: 1px solid #327fff;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
 }

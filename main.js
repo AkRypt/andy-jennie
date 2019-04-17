@@ -1,9 +1,25 @@
 $(document).ready(function(){
-    $("#main").click(function(){
-        $("#im-andy").addClass("fadeOutRight");
-        $("#im-andy").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            $("#im-andy").css({display:"none"});
-            $("#hi").css({display:"block"}).addClass("animated slideInLeft");
+    $(window).scroll(function() {
+        $(".slideanimy").each(function(){
+          var pos = $(this).offset().top;
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
         });
-    });
+        $(".slideanim-right").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide-right");
+            }
+        });
+        $(".slideanim-left").each(function(){
+            var pos = $(this).offset().top;
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide-left");
+            }
+        });
+    }); 
 });
